@@ -1,16 +1,14 @@
-  
+
 import React from 'react';
 
-  const Action = (props) => {
-    return (
-      <div>
-        <button
-          onClick={props.handlePickOption}
-          disabled={!props.hasOptions}>
-          What should I do?
+const Action = (props) => (
+  <div>
+    <button
+      onClick={props.handlePickOption}
+      disabled={!props.hasOptions}>
+      What should I do?
            </button>
-      </div>
-    );
-  }
+  </div>
+);
 
-  export default Action;
+export default Action;

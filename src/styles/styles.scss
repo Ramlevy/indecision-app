@@ -1,3 +1,4 @@
-* {
-    color: blue;
-} 
+@import './base/_settings';
+@import './base/base';
+@import './components/header';
+@import './components/container';

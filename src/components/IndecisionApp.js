@@ -18,7 +18,7 @@ class IndecisionApp extends Component {
       if (options) {
         this.setState(() => { return { options: options } });
       }
-    } catch (e) { 
+    } catch (e) {
       // Do nothing
     }
   }
@@ -52,8 +52,8 @@ class IndecisionApp extends Component {
   };
 
   handleClearSelectedOption = () => {
-    this.setState(() => { return { selectedOption: undefined }});
-    
+    this.setState(() => { return { selectedOption: undefined } });
+
   }
 
   handleAddOption = (option) => {
@@ -73,17 +73,19 @@ class IndecisionApp extends Component {
     return (
       <div>
         <Header subtitle={subtitle} />
-        <Action
-          hasOptions={this.state.options.length > 0}
-          handlePickOption={this.handlePickOption} />
-        <Options
-          options={this.state.options}
-          handleDeleteOptions={this.handleDeleteOptions}
-          handleDeleteOption={this.handleDeleteOption}
-        />
-        <AddOption
-          handleAddOption={this.handleAddOption}
-        />
+        <div className="container">
+          <Action
+            hasOptions={this.state.options.length > 0}
+            handlePickOption={this.handlePickOption} />
+          <Options
+            options={this.state.options}
+            handleDeleteOptions={this.handleDeleteOptions}
+            handleDeleteOption={this.handleDeleteOption}
+          />
+          <AddOption
+            handleAddOption={this.handleAddOption}
+          />
+        </div>
         <OptionModal
           selectedOption={this.state.selectedOption}
           handleClearSelectedOption={this.handleClearSelectedOption}

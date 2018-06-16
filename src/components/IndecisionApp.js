@@ -18,7 +18,7 @@ class IndecisionApp extends Component {
       if (options) {
         this.setState(() => { return { options: options } });
       }
-    } catch (e) {
+    } catch (e) { 
       // Do nothing
     }
   }

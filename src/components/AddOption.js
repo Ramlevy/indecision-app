@@ -22,7 +22,7 @@ import React, { Component } from 'react';
           {this.state.error && <p>{this.state.error}</p>}
           <form onSubmit={this.handleAddOption}>
             <input autoFocus type="text" name="option" />
-            <button>Add Option</button>
+            <button className="button">Add Option</button>
           </form>
         </div>
       );

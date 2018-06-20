@@ -8,6 +8,7 @@
 .add-option {
     display: flex;
     padding: $m-size;
+    flex-direction: column;
 }
 
 
@@ -17,10 +18,23 @@
     border-bottom: .3rem solid darken($dark-blue, 10%);
 
     background: $dark-blue;
-    margin-right: $s-size;
     color: $off-white;
 
     outline: 0;
-    padding: $s-size;
+    padding: $s-size; // doesnt start writing from the edge
+
+    margin: 0 0 $s-size 0;
     
+}
+
+
+// Not Mobile
+@media (min-width: $desktop-breakpoint) {
+    .add-option {
+        flex-direction: row;
+    }
+
+    .add-option__input {
+        margin: 0 $s-size 0 0;
+    }
 }

@@ -3,7 +3,7 @@ const path = require('path');  // require is built in Node Function
 //entry -> output
 
 module.exports = {
-    entry: './src/app.js',
+    entry: './src/app.js', // js entry point
     output: {
         path: path.join(__dirname, 'docs'),  // using node path to create specific path for the bundle file
         filename: 'bundle.js'
@@ -26,4 +26,4 @@ module.exports = {
     devServer: {     // webpack-dev-server package, server from the "public" path
          contentBase: path.join(__dirname, 'docs')
     }
-};
+}; 

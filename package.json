@@ -5,7 +5,7 @@
   "author": "Ram Levy",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --watch",
     "dev-server": "webpack-dev-server",
     "old-serve": "live-server public/",
     "old-build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"

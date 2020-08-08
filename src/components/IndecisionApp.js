@@ -4,8 +4,7 @@ import Options from "./Options";
 import Header from "./Header";
 import Action from "./Action";
 import OptionModal from "./OptionModal";
-import SavePreset from "./SavePreset";
-import LoadPreset from "./LoadPreset";
+import Preset from "./Preset";
 
 class IndecisionApp extends Component {
   state = {
@@ -117,18 +116,8 @@ class IndecisionApp extends Component {
             />
             <AddOption handleAddOption={this.handleAddOption} />
           </div>
-          <div className="SavePreset">
-            <SavePreset count={1} onSavePreset={this.onSavePreset} />
-            <SavePreset count={2} onSavePreset={this.onSavePreset} />
-            <SavePreset count={3} onSavePreset={this.onSavePreset} />
-          </div>
-          <div className="LoadPreset">
-            <LoadPreset count={1} onLoadPreset={this.onLoadPreset} />
-            <LoadPreset count={2} onLoadPreset={this.onLoadPreset} />
-            <LoadPreset count={3} onLoadPreset={this.onLoadPreset} />
-          </div>
+          <Preset onLoadPreset={this.onLoadPreset} onSavePreset={this.onSavePreset}/>
         </div>
-
         <OptionModal
           selectedOption={this.state.selectedOption}
           handleClearSelectedOption={this.handleClearSelectedOption}

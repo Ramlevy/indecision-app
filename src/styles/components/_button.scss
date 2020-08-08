@@ -40,6 +40,12 @@
   outline: 0;
 }
 
+.button:active {
+    background-color: $purple;
+    box-shadow: 0 0px rgb(54, 41, 102);
+    transform: translateY(4px);
+  }
+
 .button:hover {
   background: lighten($purple, 4%);
 }
@@ -57,19 +63,20 @@
 }
 
 .button-preset {
-  margin-right: 2.5em;
+  margin-right: 2.25em;
   margin-bottom: $m-size;
   background: $purple;
-  //   border: 1.6px solid black;
-  //   border-radius: 15px;
   color: white;
   font-weight: 250;
   padding: $s-size;
-  min-width: 10em;
+  min-width: 11em;
   outline: 0;
   border: none;
-  //   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-  //     1px 1px 0 #000;
+  border-bottom: 0.3rem solid darken($purple, 10%);
+}
+
+.button-preset:last-child {
+    margin-right: 0;
 }
 
 .button-preset:hover {

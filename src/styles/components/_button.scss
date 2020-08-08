@@ -1,58 +1,82 @@
 // Big Button
 .big-button {
-    background: $purple;
-    border: none;
-    border-bottom: .6rem solid darken($purple, 10%);
-    color: white;
-    font-weight: bold;
-    font-size: $l-size;
-    margin-bottom: $m-size;
-    padding: 2.4rem;
-    width: 100%;
-    outline: 0;
+  background: $purple;
+  border: none;
+  border-bottom: 0.6rem solid darken($purple, 10%);
+  color: white;
+  font-weight: bold;
+  font-size: $l-size;
+  margin-bottom: $m-size;
+  padding: 2.4rem;
+  width: 100%;
+  outline: 0;
 }
 
 // Not Mobile
 @media (min-width: $desktop-breakpoint) {
-    .big-button {
-        margin-bottom: $xl-size;
-    }
-} 
+  .big-button {
+    margin-bottom: $xl-size;
+  }
+}
 
 .big-button:disabled {
-    opacity: .5;
+  opacity: 0.5;
 }
 
 .big-button:hover {
-    background: lighten($purple, 4%);
-    border-bottom: .6rem solid $purple;
+  background: lighten($purple, 4%);
+  border-bottom: 0.6rem solid $purple;
 }
 
 // Button
 
 .button {
-    background: $purple;
-    border: none;
-    border-bottom: .3rem solid darken($purple, 10%);
-    color: white;
-    font-weight: 500;
-    padding: $s-size;
-    outline: 0;
+  background: $purple;
+  border: none;
+  border-bottom: 0.3rem solid darken($purple, 10%);
+  color: white;
+  font-weight: 500;
+  padding: $s-size;
+  outline: 0;
 }
 
 .button:hover {
-    background: lighten($purple, 4%);
+  background: lighten($purple, 4%);
 }
 
-
 .button--link {
-    background: none;
-    border: none;
-    color: $off-white;
-    padding: 0;
+  background: none;
+  border: none;
+  color: $off-white;
+  padding: 0;
 }
 
 .button--link:hover {
-    color: lighten($off-white, 4%);
-    background : none;
+  color: lighten($off-white, 4%);
+  background: none;
+}
+
+.button-preset {
+  margin-right: 2.5em;
+  margin-bottom: $m-size;
+  background: $purple;
+  //   border: 1.6px solid black;
+  //   border-radius: 15px;
+  color: white;
+  font-weight: 250;
+  padding: $s-size;
+  min-width: 10em;
+  outline: 0;
+  border: none;
+  //   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+  //     1px 1px 0 #000;
+}
+
+.button-preset:hover {
+  background: lighten($purple, 4%);
+}
+.button-preset:active {
+  background-color: $purple;
+  box-shadow: 0 6px rgb(54, 41, 102);
+  transform: translateY(4px);
 }
